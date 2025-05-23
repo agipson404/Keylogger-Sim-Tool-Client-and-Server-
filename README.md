@@ -12,6 +12,24 @@ The solution includes a persistent keylogger client and a TCP-based command-and-
 
 ---
 
+## 🧠 Simulated Behaviors (MITRE ATT&CK Mapping)
+
+This project emulates common malware behaviors, aligned with the MITRE ATT&CK® framework.
+
+| Behavior                                      | Description                                                                 | MITRE ID     |
+|----------------------------------------------|-----------------------------------------------------------------------------|--------------|
+| Keyboard Input Capture                        | Captures user keystrokes via API hook                                       | `T1056.001`  |
+| Active Window Title Logging                   | Records the foreground application for context-aware logging                | `T1056`      |
+| Encrypted Exfiltration via Custom Protocol    | Sends AES-encrypted logs over custom TCP socket                             | `T1041`      |
+| Base64 Encoding for Obfuscation               | Encodes payloads before transmission to mimic benign traffic                | `T1027`      |
+| Persistent Beacon-like Communication          | Maintains a consistent socket connection for regular data exfil             | `T1071.001`  |
+| In-Memory Function Hooking                    | Uses `SetWindowsHookEx` to install runtime hooks                            | `T1055`      |
+| Manual Analysis with Static & Dynamic Tools   | Supports reverse engineering with tools like Wireshark, x32dbg, dnSpy       | `T1140`*     |
+
+> *T1140 typically applies to obfuscated files or information and is referenced here for decryption analysis.
+
+---
+
 ## 🔧 Key Features
 
 - **Captures Keystrokes**  
