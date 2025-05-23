@@ -1,4 +1,7 @@
 🛡️ C# Keylogger Simulation Tool (Client–Server)
+Created By: Arthur Gipson
+Youtube Vidoe: https://youtu.be/caqFF6DSHxQ
+
 This project is a red team–oriented malware simulation tool written in C#. It replicates core behaviors of advanced keylogging malware in a safe, controlled environment for the purpose of cybersecurity training, malware analysis, and reverse engineering demonstrations.
 
 The simulation was developed and tested in a virtualized lab environment. A Windows 10 Pro virtual machine was manually set up and configured using VMware Workstation to safely contain and observe the behavior of the client-side keylogger and server interactions.
@@ -31,3 +34,20 @@ The project can be analyzed with tools like Wireshark and x32dbg.
 
 Includes Blue Team Demo
 The video shows how to detect, analyze, and stop the keylogger using reverse engineering tools.
+
+📁 Project Structure
+Keylogger-Sim-Tool-Client-and-Server/
+│
+├── Keylogger Sim Tool (Client)/       # C# keylogger client project
+│   ├── Program.cs                     # Hooks, logs, encrypts, sends keystrokes
+│   ├── Keylogger Sim Tool (Client).csproj
+│
+├── Keylogger Sim Tool (Server)/       # C# TCP server project
+│   ├── Program.cs                     # Receives, decrypts, and logs data
+│   ├── Keylogger Sim Tool (Server).csproj
+│
+├── .gitignore                         # Ignores bin/, obj/, temp files, etc.
+├── .gitattributes                     # Git configuration
+├── LICENSE                            # MIT license
+├── README.md                          # Project description and usage guide
+├── Keylogger Sim Tool (Client and Server).sln  # Visual Studio solution file
